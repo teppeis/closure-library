@@ -27446,6 +27446,7 @@ goog.i18n.CompactNumberFormatSymbols_zh_Hant_TW =
 
 /**
  * Selected compact number formatting symbols by locale.
+ * @private
  */
 goog.i18n.CompactNumberFormatSymbols = goog.i18n.CompactNumberFormatSymbols_en;
 
