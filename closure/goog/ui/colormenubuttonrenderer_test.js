@@ -47,7 +47,7 @@ function testEquality() {
 
 function testWrapCaption() {
   var caption = goog.dom.createDom(goog.dom.TagName.DIV, null, 'Foo');
-  var wrappedCaption = goog.ui.ColorMenuButtonRenderer.wrapCaption(caption,
+  var wrappedCaption = goog.ui.ColorMenuButtonRenderer.wrapCaption(caption, '',
       goog.dom.getDomHelper());
   assertNotEquals('Caption should have been wrapped', caption, wrappedCaption);
   assertEquals('Wrapped caption should have indicator css class',
@@ -56,7 +56,7 @@ function testWrapCaption() {
 
 function testSetCaptionValue() {
   var caption = goog.dom.createDom(goog.dom.TagName.DIV, null, 'Foo');
-  var wrappedCaption = goog.ui.ColorMenuButtonRenderer.wrapCaption(caption,
+  var wrappedCaption = goog.ui.ColorMenuButtonRenderer.wrapCaption(caption, '',
       goog.dom.getDomHelper());
   goog.ui.ColorMenuButtonRenderer.setCaptionValue(wrappedCaption, 'red');
 
