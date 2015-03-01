@@ -95,6 +95,12 @@ function nodeGlobalRequire(file) {
 // bootstrap/nodejs.js.
 nodeGlobalRequire(path.resolve(__dirname, '..', 'base.js'));
 
+/**
+ * Make goog.require return the namespace
+ * TODO: Make public API in base.js
+ * @suppress {underscore|visibility}
+ */
+goog.moduleLoaderState_ = {moduleName: undefined, declareTestMethods: false};
 
 /**
  * Bootstraps a file into the global scope.

@@ -652,7 +652,10 @@ goog.require = function(name) {
       if (path) {
         goog.included_[path] = true;
         goog.writeScripts_();
-        return null;
+        // If the module is loaded synchronously, return it.
+        if (goog.isInModuleLoader_() && goog.isProvided_(name)) {
+          return goog.module.getInternal_(name);
+        }
       }
     }
 
